@@ -1,3 +1,4 @@
+
 *.bundle.*
 lib/
 node_modules/
@@ -116,4 +117,6 @@ dmypy.json
 _output
 
 # virtual env
-.venv
+/.venv/*
+
+!/.venv/share/jupyter/labextensions/jupyterlab_apod/**
