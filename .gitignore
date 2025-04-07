@@ -117,6 +117,27 @@ dmypy.json
 _output
 
 # virtual env
-/.venv/*
 
-!/.venv/share/jupyter/labextensions/jupyterlab_apod/**
+# Ignore everything in .venv
+.venv/**
+
+# Unignore just the jupyterlab_apod directory and its contents
+!.venv/share/jupyter/labextensions/jupyterlab_apod/
+!.venv/share/jupyter/labextensions/jupyterlab_apod/**
+
+# Re-ignore everything else inside labextensions (optional safeguard)
+.venv/share/jupyter/labextensions/*
+!.venv/share/jupyter/labextensions/jupyterlab_apod/
+
+# Re-ignore everything else inside jupyter
+.venv/share/jupyter/*
+!.venv/share/jupyter/labextensions/
+
+# Re-ignore everything else inside share
+.venv/share/*
+!.venv/share/jupyter/
+
+# Re-ignore everything else in .venv root (optional, may already be covered)
+.venv/*
+!.venv/share/
+
